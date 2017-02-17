@@ -1,27 +1,41 @@
-## Purpose
+# Phase 2B
 
-Often one or more github repos and google docs repositories are used in a single github project.   For example:  Front end and back end.  In addition multiple public or private share for binary documents are also used.    This project will serves as a wrapper for both of those conepts as well as being a single repository for documentation.
+## Introduction to Phase 2B
+The next phase Drone Series, which we are calling 2b,  will begin at the end of February 2017 and run through May.   This Phase has three primary objectives.
 
-This project uses mkdocs to provide an simple platform to generate html pages from markdown.   It can be hosted anywhere, includes special provisions for ghpages or can be run locally with ```mkdocs serve```
+ 1. Drone request Scheduling
+ 2. Fleet Management
+ 3. Data (flight log) retrieval, parsing and storage
 
-### Topcoder Theme
-This repository uses a third party theme called [cinder](https://github.com/chrissimpkins/cinder).   However this theme has been forked and added the topcoder logo <img src="https://storage.googleapis.com/instapage-user-media/97c829ee/1997047-0-high-topcoder-horizo.png"  height="22px"/>.   It would be easy enough to include this forked code directly in the tcProjWrapper repo directly, except this project relies heavily on  submodule for src so we wanted to include the theme as a submodule too.  In addition the submodule could be forked or branched specifly to include a customers logo.
+ Some of these objectives will build on the previous phase front-end and back-end and others will be new
 
-### Topcoder Docs
-Since this project also contains content,  We can include standard docs like bug bash instructions.
+### Drone request Scheduling
+### Fleet Management
+### Data (flight log) retrieval, parsing and storage
 
-### Deploying this template as a project
-Once you clone this project with ```git clone --recursive git@github.com:topcoderinc/tcProjWrapper.git  myproject ``` you can then run ```sh bin/setup.sh``` and you will be prompted for the new project name.   This script will remove the git reference to this repo and do a fresh ```git init```
-This file is the index.md in the docs directory.    Edit this file and describe the top level of your project. Also be sure to exit the mkdocs.yml file lines 9-11
+## Previous Phase output summary (Phase 2)
 
-```
-9  - tcProjWrapper:
-10    - 'This Project introduction': index.md
-11    - mkdocs: mkDocsIndex.md
-```
+### Drone Companion PC "Agent"
+Drone Series Phase 2 ran from late October 2016 through January 2017.  In addition to build a Drone Series Platform  (DSP) which allowed for consumer and providers to exchange services in a 2 sided market place we also built and REST based agent, written in NodeJS, that listened on the companion pc (raspberry pi) which was connected to the the pixhawk flight controller via serial.   The "agent" proxied instructions and locations between the drone itself and the dsp.
 
-### Quick Start
- 1. Make sure you have python2 and pip2 installed, then run ```pip2 install mkdocs``` to install mkdocs
- 2. clone the template ``` git clone --recursive git@github.com:topcoderinc/tcProjWrapper.git  myproject ```
- 3. cd ```myproject``` and run  ```mkdocs serve```
- 4. You should also edit the mkdocs.yml and edit the sitename.   It might be a good idea to remove the .git dir and do a ```git init``` to orphan this template(repo) from your new wrapper project.
+### External Drone Tracker
+The above described "agent" works great for the pixhawk,  because we have serial access to the flight controller, but we also wanted to be able to strap on a device to a ready to fly drone. To acheive this we create [droneTracker](https://github.com/kbowerma/droneTracker) which provides the same GPS smart updates to the DSP by using and particle photon](https://store.particle.io/) + [GPS](https://www.adafruit.com/product/746) + [magnometer / accelerometer](https://www.adafruit.com/products/1120)  + [Drone Tail lights -- neopixel leds and buzzer --  ](https://www.amazon.com/gp/product/B019UVHWMS).  DroneTracker updates the DSP location and in the response it can react to other drones that are too close or it can react to being in a No-Fly-Zone.  The image below shows the neopixel leds running a police siren sequence when the drone has violated a no fly zone.
+
+<table border="0">
+  <tr><td>
+      <figure>
+      <img width=60%  src="https://cloud.githubusercontent.com/assets/1180747/23071626/9ef6242e-f4f4-11e6-9bb4-9b453de7befc.png">
+      <figcaption>3DR solo showing tail lights of droneTracker</figcaption>
+      </figure>
+    </td>
+    <td>
+      <figure>
+      <img src="https://cloud.githubusercontent.com/assets/1180747/23071476/0f63c5be-f4f4-11e6-9b2b-ad20caca488d.gif" />
+      <figcaption>Fig1. - A view of the pulpit rock in Norway.</figcaption>
+      </figure>
+  </td> </tr>
+</table>
+
+### DSP features
+ * Drone provider, Drone Pilot, Consumer, and Admin Profiles
+ * Ability for consumer to create a drone service request for imagery

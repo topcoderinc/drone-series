@@ -1,0 +1,9 @@
+[submodule "src/dsp-server"]
+	path = src/dsp-server
+	url = git@github.com:topcoderinc/dsp-server.git
+[submodule "src/dsp-frontend"]
+	path = src/dsp-frontend
+	url = git@github.com:topcoderinc/dsp-server.git
+[submodule "src/dsp-drone"]
+	path = src/dsp-drone
+	url = git@github.com:topcoderinc/dsp-drone.git

@@ -1,13 +1,16 @@
 site_name: drone-series
-repo_url: https://github.com/topcoderinc/tcProjWrapper
+repo_url: https://github.com/topcoderinc/drone-series
 pages:
-    - 'Topcoder Docs':
-       - 'Copilot Responsibilities': topcoder/copilotsResponsiblites.md
-       - code:
+    - Phase 2B: 'index.md'
+    - Front End: dsp/frontEnd.md
+    - Back End: dsp/backEnd.md
+    - Topcoder Docs:
+      - Copilot Responsibilities: topcoder/copilotsResponsiblites.md
+      - code:
           - 'Fixing Bugs from github': topcoder/fixingBugs.md
           - 'Ragnar: Git Process': topcoder/RagnarGit.md
-    - tcProjWrapper:
-      - 'This Project introduction': index.md
-      - mkdocs: mkDocsIndex.md
-    - Todo: Todo.md
+      - tcProjWrapper:
+        - This Project introduction: topcoder/tcProjWrapper.md
+        - mkdocs: mkDocsIndex.md
+
 theme_dir: cinder/site
