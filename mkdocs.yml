@@ -1,7 +1,9 @@
 site_name: drone-series
 repo_url: https://github.com/topcoderinc/drone-series
 pages:
-    - Phase 2B: index.md
+    - Phase 2B:
+      - Introduction to Phase 2b: index.md
+      - challenge 1: challenges/schedulingArchitectureComponentSurvey.md
     - Phase 2:
       - Phase 2 summary and features: dsp/phase2Features.md
       - Front End readme: dsp/frontEnd.md
