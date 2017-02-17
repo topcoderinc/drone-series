@@ -1,9 +1,11 @@
 site_name: drone-series
 repo_url: https://github.com/topcoderinc/drone-series
 pages:
-    - Phase 2B: 'index.md'
-    - Front End: dsp/frontEnd.md
-    - Back End: dsp/backEnd.md
+    - Phase 2B: index.md
+    - Phase 2:
+      - Phase 2 summary and features: dsp/phase2Features.md
+      - Front End readme: dsp/frontEnd.md
+      - Back End readme: dsp/backEnd.md
     - Topcoder Docs:
       - Copilot Responsibilities: topcoder/copilotsResponsiblites.md
       - code:
