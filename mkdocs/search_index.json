@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Phase 2B\n\n\nIntroduction to Phase 2B\n\n\nThe next phase Drone Series, which we are calling 2b,  will begin at the end of February 2017 and run through May.   This Phase has three primary objectives.\n\n\n\n\nDrone request Scheduling\n\n\nFleet Management\n\n\nData (flight log) retrieval, parsing and storage\n\n\n\n\nSome of these objectives will build on the previous phase front-end and back-end and others will be new\n\n\nDrone request Scheduling\n\n\nFleet Management\n\n\nData (flight log) retrieval, parsing and storage\n\n\nPrevious Phase output summary (Phase 2)\n\n\nDrone Companion PC \"Agent\"\n\n\nDrone Series Phase 2 ran from late October 2016 through January 2017.  In addition to build a Drone Series Platform  (DSP) which allowed for consumer and providers to exchange services in a 2 sided market place we also built and REST based agent, written in NodeJS, that listened on the companion pc (raspberry pi) which was connected to the the pixhawk flight controller via serial.   The \"agent\" proxied instructions and locations between the drone itself and the dsp.\n\n\nExternal Drone Tracker\n\n\nThe above described \"agent\" works great for the pixhawk,  because we have serial access to the flight controller, but we also wanted to be able to strap on a device to a ready to fly drone. To acheive this we create \ndroneTracker\n which provides the same GPS smart updates to the DSP by using and particle photon](https://store.particle.io/) + \nGPS\n + \nmagnometer / accelerometer\n  + \nDrone Tail lights -- neopixel leds and buzzer --  \n.  DroneTracker updates the DSP location and in the response it can react to other drones that are too close or it can react to being in a No-Fly-Zone.  The image below shows the neopixel leds running a police siren sequence when the drone has violated a no fly zone.\n\n\n\n  \n\n      \n\n      \n\n      \n3DR solo showing tail lights of droneTracker\n\n      \n\n    \n\n    \n\n      \n\n      \n\n      \nFig1. - A view of the pulpit rock in Norway.\n\n      \n\n  \n \n\n\n\n\n\nDSP features\n\n\n\n\nDrone provider, Drone Pilot, Consumer, and Admin Profiles\n\n\nAbility for consumer to create a drone service request for imagery", 
+            "text": "Phase 2B\n\n\nIntroduction to Phase 2B\n\n\nThe next phase Drone Series, which we are calling 2b,  will begin at the end of February 2017 and run through May.   This Phase has three primary objectives.\n\n\n\n\nDrone request Scheduling\n\n\nFleet Management\n\n\nData (flight log) retrieval, parsing and storage\n\n\n\n\nSome of these objectives will build on the previous phase front-end and back-end and others will be new\n\n\nDrone Request Scheduling\n\n\nA drone request is a set of instructions that a consumer provides to a drone service provider and drone pilot.  The request may include and area on a map and explicit instruction of what the pilot should photograph.  An example \n(request example 1)\n might include a request for a drone to take ariel images of a wedding.  This example has a tightly constrained start and end time.  This request becomes a mission(TODO definition) which has 1 flight.   \n\n\nFleet Management\n\n\nData (flight log) retrieval, parsing and storage\n\n\nPrevious Phase output summary and features\n\n\nDefinitions\n\n\nrequest\n\n\nmission\n\n\nflight", 
             "title": "Phase 2B"
         }, 
         {
@@ -17,8 +17,8 @@
         }, 
         {
             "location": "/#drone-request-scheduling", 
-            "text": "", 
-            "title": "Drone request Scheduling"
+            "text": "A drone request is a set of instructions that a consumer provides to a drone service provider and drone pilot.  The request may include and area on a map and explicit instruction of what the pilot should photograph.  An example  (request example 1)  might include a request for a drone to take ariel images of a wedding.  This example has a tightly constrained start and end time.  This request becomes a mission(TODO definition) which has 1 flight.", 
+            "title": "Drone Request Scheduling"
         }, 
         {
             "location": "/#fleet-management", 
@@ -31,29 +31,54 @@
             "title": "Data (flight log) retrieval, parsing and storage"
         }, 
         {
-            "location": "/#previous-phase-output-summary-phase-2", 
+            "location": "/#previous-phase-output-summary-and-features", 
             "text": "", 
-            "title": "Previous Phase output summary (Phase 2)"
+            "title": "Previous Phase output summary and features"
         }, 
         {
-            "location": "/#drone-companion-pc-agent", 
+            "location": "/#definitions", 
+            "text": "", 
+            "title": "Definitions"
+        }, 
+        {
+            "location": "/#request", 
+            "text": "", 
+            "title": "request"
+        }, 
+        {
+            "location": "/#mission", 
+            "text": "", 
+            "title": "mission"
+        }, 
+        {
+            "location": "/#flight", 
+            "text": "", 
+            "title": "flight"
+        }, 
+        {
+            "location": "/dsp/phase2Features/", 
+            "text": "Drone Companion PC \"Agent\"\n\n\nDrone Series Phase 2 ran from late October 2016 through January 2017.  In addition to build a Drone Series Platform  (DSP) which allowed for consumer and providers to exchange services in a 2 sided market place we also built and REST based agent, written in NodeJS, that listened on the companion pc (raspberry pi) which was connected to the the pixhawk flight controller via serial.   The \"agent\" proxied instructions and locations between the drone itself and the dsp.\n\n\nExternal Drone Tracker\n\n\nThe above described \"agent\" works great for the pixhawk,  because we have serial access to the flight controller, but we also wanted to be able to strap on a device to a ready to fly drone. To acheive this we create \ndroneTracker\n which provides the same GPS smart updates to the DSP by using and particle photon](https://store.particle.io/) + \nGPS\n + \nmagnometer / accelerometer\n  + \nDrone Tail lights -- neopixel leds and buzzer --  \n.  DroneTracker updates the DSP location and in the response it can react to other drones that are too close or it can react to being in a No-Fly-Zone.  The image below shows the neopixel leds running a police siren sequence when the drone has violated a no fly zone.\n\n\n\n  \n\n      \n\n      \n\n      \n3DR solo showing tail lights of droneTracker\n\n      \n\n    \n\n    \n\n      \n\n      \n\n      \nFig1. - A view of the pulpit rock in Norway.\n\n      \n\n  \n \n\n\n\n\n\nDSP features\n\n\n\n\nDrone provider, Drone Pilot, Consumer, and Admin Profiles\n\n\nAbility for consumer to create a drone service request for imagery", 
+            "title": "Phase 2 summary and features"
+        }, 
+        {
+            "location": "/dsp/phase2Features/#drone-companion-pc-agent", 
             "text": "Drone Series Phase 2 ran from late October 2016 through January 2017.  In addition to build a Drone Series Platform  (DSP) which allowed for consumer and providers to exchange services in a 2 sided market place we also built and REST based agent, written in NodeJS, that listened on the companion pc (raspberry pi) which was connected to the the pixhawk flight controller via serial.   The \"agent\" proxied instructions and locations between the drone itself and the dsp.", 
             "title": "Drone Companion PC \"Agent\""
         }, 
         {
-            "location": "/#external-drone-tracker", 
+            "location": "/dsp/phase2Features/#external-drone-tracker", 
             "text": "The above described \"agent\" works great for the pixhawk,  because we have serial access to the flight controller, but we also wanted to be able to strap on a device to a ready to fly drone. To acheive this we create  droneTracker  which provides the same GPS smart updates to the DSP by using and particle photon](https://store.particle.io/) +  GPS  +  magnometer / accelerometer   +  Drone Tail lights -- neopixel leds and buzzer --   .  DroneTracker updates the DSP location and in the response it can react to other drones that are too close or it can react to being in a No-Fly-Zone.  The image below shows the neopixel leds running a police siren sequence when the drone has violated a no fly zone.  \n   \n       \n       \n       3DR solo showing tail lights of droneTracker \n       \n     \n     \n       \n       \n       Fig1. - A view of the pulpit rock in Norway.", 
             "title": "External Drone Tracker"
         }, 
         {
-            "location": "/#dsp-features", 
+            "location": "/dsp/phase2Features/#dsp-features", 
             "text": "Drone provider, Drone Pilot, Consumer, and Admin Profiles  Ability for consumer to create a drone service request for imagery", 
             "title": "DSP features"
         }, 
         {
             "location": "/dsp/frontEnd/", 
             "text": "Front End", 
-            "title": "Front End"
+            "title": "Front End readme"
         }, 
         {
             "location": "/dsp/frontEnd/#front-end", 
@@ -63,7 +88,7 @@
         {
             "location": "/dsp/backEnd/", 
             "text": "Back End", 
-            "title": "Back End"
+            "title": "Back End readme"
         }, 
         {
             "location": "/dsp/backEnd/#back-end", 

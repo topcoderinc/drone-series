@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
-    <title>Fixing Bugs from github - drone-series</title>
+    <title>Phase 2 summary and features - drone-series</title>
 
     <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -74,25 +74,25 @@
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Phase 2 <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
-<li >
-    <a href="../../dsp/phase2Features/">Phase 2 summary and features</a>
+<li class="active">
+    <a href="./">Phase 2 summary and features</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../dsp/frontEnd/">Front End readme</a>
+    <a href="../frontEnd/">Front End readme</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../dsp/backEnd/">Back End readme</a>
+    <a href="../backEnd/">Back End readme</a>
 </li>
 
                         
@@ -101,13 +101,13 @@
                 
                 
                 
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Topcoder Docs <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
 <li >
-    <a href="../copilotsResponsiblites/">Copilot Responsibilities</a>
+    <a href="../../topcoder/copilotsResponsiblites/">Copilot Responsibilities</a>
 </li>
 
                         
@@ -117,14 +117,14 @@
     <ul class="dropdown-menu">
         
             
-<li class="active">
-    <a href="./">Fixing Bugs from github</a>
+<li >
+    <a href="../../topcoder/fixingBugs/">Fixing Bugs from github</a>
 </li>
 
         
             
 <li >
-    <a href="../RagnarGit/">Ragnar: Git Process</a>
+    <a href="../../topcoder/RagnarGit/">Ragnar: Git Process</a>
 </li>
 
         
@@ -139,7 +139,7 @@
         
             
 <li >
-    <a href="../tcProjWrapper/">This Project introduction</a>
+    <a href="../../topcoder/tcProjWrapper/">This Project introduction</a>
 </li>
 
         
@@ -168,12 +168,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../copilotsResponsiblites/">
+                        <a rel="next" href="../..">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../RagnarGit/">
+                        <a rel="prev" href="../frontEnd/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -198,60 +198,43 @@
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="first-level active"><a href="#rules-for-fixing-bugs-issues">Rules for Fixing Bugs (Issues)</a></li>
+        <li class="first-level active"><a href="#drone-companion-pc-agent">Drone Companion PC "Agent"</a></li>
         
     
-        <li class="first-level "><a href="#process-for-resolving-bugs-issues">Process for Resolving Bugs (Issues)</a></li>
+        <li class="first-level "><a href="#external-drone-tracker">External Drone Tracker</a></li>
         
     
-        <li class="first-level "><a href="#tips">Tips</a></li>
-        
-    
-        <li class="first-level "><a href="#point-system">Point System</a></li>
+        <li class="first-level "><a href="#dsp-features">DSP features</a></li>
         
     
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<pre><code>Current Development Branch:  dev
-mtwomey edited this page on Dec 24, 2014 · 12 revisions
-</code></pre>
-<h2 id="rules-for-fixing-bugs-issues">Rules for Fixing Bugs (Issues)</h2>
-<p>IE11 is the primary browser used for the application. Please make sure to test all fixes against this browser.</p>
-<ol>
-<li>All eligible tasks / issues will be labeled “Up For Grabs”  You can assign any unassigned issues with this label to yourself (first come first serve)</li>
-<li>You can only assign yourself ONE issue at a time. We will monitor this and take away tasks if you do not comply</li>
-<li>If you cannot complete the task within 24 hours, add a comment to it as to why, or it will go back to unassigned</li>
-<li>Each task / issue will have points allocated to it which will translate to prizes</li>
-</ol>
-<h2 id="process-for-resolving-bugs-issues">Process for Resolving Bugs (Issues)</h2>
-<ol>
-<li>Remove the "Up For Grabs" label from the Issue and assign it to yourself</li>
-<li>Create a branch off the Current Development Branch (see the top of this page)</li>
-<li><em>git checkout -b [YOUR-USERNAME]-issue-[ISSUE#] [CURRENT DEVELOPMENT BRANCH]</em></li>
-<li>for example <em>git checkout -b mtwomey-issue-22 dev</em></li>
-<li>Please make <strong>sure</strong> you are branching off the correct development branch and not master!</li>
-<li>Do your work on this branch</li>
-<li>Do frequent pulls of the Current Development Branch if you're working the issue for more than a few hours</li>
-<li><em>git pull --rebase origin [CURRENT DEVELOPMENT BRANCH]</em></li>
-<li>Once you finish the task</li>
-<li>Commit your changes</li>
-<li>Do a final <em>git pull --rebase origin [CURRENT DEVELOPMENT BRANCH]</em> to make sure nothing has changed that affects your fixes</li>
-<li>Push your branch to GitHub</li>
-<li><em>git push origin [BRANCH NAME]</em></li>
-<li>Add the "Ready for Review" label to the Issue</li>
-<li>Create a pull request for your branch to the Current Development Branch</li>
-<li>Start your next issue!</li>
-</ol>
-<h2 id="tips">Tips</h2>
+<h1 id="drone-companion-pc-agent">Drone Companion PC "Agent"</h1>
+<p>Drone Series Phase 2 ran from late October 2016 through January 2017.  In addition to build a Drone Series Platform  (DSP) which allowed for consumer and providers to exchange services in a 2 sided market place we also built and REST based agent, written in NodeJS, that listened on the companion pc (raspberry pi) which was connected to the the pixhawk flight controller via serial.   The "agent" proxied instructions and locations between the drone itself and the dsp.</p>
+<h1 id="external-drone-tracker">External Drone Tracker</h1>
+<p>The above described "agent" works great for the pixhawk,  because we have serial access to the flight controller, but we also wanted to be able to strap on a device to a ready to fly drone. To acheive this we create <a href="https://github.com/kbowerma/droneTracker">droneTracker</a> which provides the same GPS smart updates to the DSP by using and particle photon](https://store.particle.io/) + <a href="https://www.adafruit.com/product/746">GPS</a> + <a href="https://www.adafruit.com/products/1120">magnometer / accelerometer</a>  + <a href="https://www.amazon.com/gp/product/B019UVHWMS">Drone Tail lights -- neopixel leds and buzzer --  </a>.  DroneTracker updates the DSP location and in the response it can react to other drones that are too close or it can react to being in a No-Fly-Zone.  The image below shows the neopixel leds running a police siren sequence when the drone has violated a no fly zone.</p>
+<table border="0">
+  <tr><td>
+      <figure>
+      <img width=60%  src="https://cloud.githubusercontent.com/assets/1180747/23071626/9ef6242e-f4f4-11e6-9bb4-9b453de7befc.png">
+      <figcaption>3DR solo showing tail lights of droneTracker</figcaption>
+      </figure>
+    </td>
+    <td>
+      <figure>
+      <img src="https://cloud.githubusercontent.com/assets/1180747/23071476/0f63c5be-f4f4-11e6-9b2b-ad20caca488d.gif" />
+      <figcaption>Fig1. - A view of the pulpit rock in Norway.</figcaption>
+      </figure>
+  </td> </tr>
+</table>
+
+<h1 id="dsp-features">DSP features</h1>
 <ul>
-<li>If you have questions, post a comment on the github issue</li>
-<li>If you have questions on this process contact mtwomey@appirio.com</li>
-</ul>
-<h2 id="point-system">Point System</h2>
-<p>1 point = $25 and will be paid weekly</p>
-<p>The tasks are geared to be small in scope and completed quickly.  Some may take longer than others but in general should be less than a day.</p></div>
+<li>Drone provider, Drone Pilot, Consumer, and Admin Profiles</li>
+<li>Ability for consumer to create a drone service request for imagery</li>
+</ul></div>
         
     </div>
 

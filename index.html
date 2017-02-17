@@ -74,14 +74,29 @@
                 
                 
                 
-                    <li >
-                        <a href="dsp/frontEnd/">Front End</a>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="dsp/backEnd/">Back End</a>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Phase 2 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="dsp/phase2Features/">Phase 2 summary and features</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="dsp/frontEnd/">Front End readme</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="dsp/backEnd/">Back End readme</a>
+</li>
+
+                        
+                        </ul>
                     </li>
                 
                 
@@ -158,7 +173,7 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="dsp/frontEnd/">
+                        <a rel="prev" href="dsp/phase2Features/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -187,20 +202,23 @@
         
             <li class="second-level"><a href="#introduction-to-phase-2b">Introduction to Phase 2B</a></li>
             
-                <li class="third-level"><a href="#drone-request-scheduling">Drone request Scheduling</a></li>
+                <li class="third-level"><a href="#drone-request-scheduling">Drone Request Scheduling</a></li>
             
                 <li class="third-level"><a href="#fleet-management">Fleet Management</a></li>
             
                 <li class="third-level"><a href="#data-flight-log-retrieval-parsing-and-storage">Data (flight log) retrieval, parsing and storage</a></li>
             
         
-            <li class="second-level"><a href="#previous-phase-output-summary-phase-2">Previous Phase output summary (Phase 2)</a></li>
+            <li class="second-level"><a href="#previous-phase-output-summary-and-features">Previous Phase output summary and features</a></li>
             
-                <li class="third-level"><a href="#drone-companion-pc-agent">Drone Companion PC "Agent"</a></li>
+        
+            <li class="second-level"><a href="#definitions">Definitions</a></li>
             
-                <li class="third-level"><a href="#external-drone-tracker">External Drone Tracker</a></li>
+                <li class="third-level"><a href="#request">request</a></li>
             
-                <li class="third-level"><a href="#dsp-features">DSP features</a></li>
+                <li class="third-level"><a href="#mission">mission</a></li>
+            
+                <li class="third-level"><a href="#flight">flight</a></li>
             
         
     
@@ -217,34 +235,15 @@
 <li>Data (flight log) retrieval, parsing and storage</li>
 </ol>
 <p>Some of these objectives will build on the previous phase front-end and back-end and others will be new</p>
-<h3 id="drone-request-scheduling">Drone request Scheduling</h3>
+<h3 id="drone-request-scheduling">Drone Request Scheduling</h3>
+<p>A drone request is a set of instructions that a consumer provides to a drone service provider and drone pilot.  The request may include and area on a map and explicit instruction of what the pilot should photograph.  An example <a href="./TODO">(request example 1)</a> might include a request for a drone to take ariel images of a wedding.  This example has a tightly constrained start and end time.  This request becomes a mission(TODO definition) which has 1 flight.   </p>
 <h3 id="fleet-management">Fleet Management</h3>
 <h3 id="data-flight-log-retrieval-parsing-and-storage">Data (flight log) retrieval, parsing and storage</h3>
-<h2 id="previous-phase-output-summary-phase-2">Previous Phase output summary (Phase 2)</h2>
-<h3 id="drone-companion-pc-agent">Drone Companion PC "Agent"</h3>
-<p>Drone Series Phase 2 ran from late October 2016 through January 2017.  In addition to build a Drone Series Platform  (DSP) which allowed for consumer and providers to exchange services in a 2 sided market place we also built and REST based agent, written in NodeJS, that listened on the companion pc (raspberry pi) which was connected to the the pixhawk flight controller via serial.   The "agent" proxied instructions and locations between the drone itself and the dsp.</p>
-<h3 id="external-drone-tracker">External Drone Tracker</h3>
-<p>The above described "agent" works great for the pixhawk,  because we have serial access to the flight controller, but we also wanted to be able to strap on a device to a ready to fly drone. To acheive this we create <a href="https://github.com/kbowerma/droneTracker">droneTracker</a> which provides the same GPS smart updates to the DSP by using and particle photon](https://store.particle.io/) + <a href="https://www.adafruit.com/product/746">GPS</a> + <a href="https://www.adafruit.com/products/1120">magnometer / accelerometer</a>  + <a href="https://www.amazon.com/gp/product/B019UVHWMS">Drone Tail lights -- neopixel leds and buzzer --  </a>.  DroneTracker updates the DSP location and in the response it can react to other drones that are too close or it can react to being in a No-Fly-Zone.  The image below shows the neopixel leds running a police siren sequence when the drone has violated a no fly zone.</p>
-<table border="0">
-  <tr><td>
-      <figure>
-      <img width=60%  src="https://cloud.githubusercontent.com/assets/1180747/23071626/9ef6242e-f4f4-11e6-9bb4-9b453de7befc.png">
-      <figcaption>3DR solo showing tail lights of droneTracker</figcaption>
-      </figure>
-    </td>
-    <td>
-      <figure>
-      <img src="https://cloud.githubusercontent.com/assets/1180747/23071476/0f63c5be-f4f4-11e6-9b2b-ad20caca488d.gif" />
-      <figcaption>Fig1. - A view of the pulpit rock in Norway.</figcaption>
-      </figure>
-  </td> </tr>
-</table>
-
-<h3 id="dsp-features">DSP features</h3>
-<ul>
-<li>Drone provider, Drone Pilot, Consumer, and Admin Profiles</li>
-<li>Ability for consumer to create a drone service request for imagery</li>
-</ul></div>
+<h2 id="previous-phase-output-summary-and-features"><a href="dsp/phase2Features/">Previous Phase output summary and features</a></h2>
+<h2 id="definitions">Definitions</h2>
+<h3 id="request">request</h3>
+<h3 id="mission">mission</h3>
+<h3 id="flight">flight</h3></div>
         
     </div>
 
@@ -297,5 +296,5 @@
 
 <!--
 MkDocs version : 0.16.1
-Build Date UTC : 2017-02-17 16:53:25
+Build Date UTC : 2017-02-17 17:58:16
 -->
