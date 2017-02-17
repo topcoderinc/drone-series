@@ -68,8 +68,23 @@
                 <ul class="nav navbar-nav">
                 
                 
-                    <li class="active">
-                        <a href=".">Phase 2B</a>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Phase 2B <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li class="active">
+    <a href=".">Introduction to Phase 2b</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="challenges/schedulingArchitectureComponentSurvey/">challenge 1</a>
+</li>
+
+                        
+                        </ul>
                     </li>
                 
                 
@@ -173,7 +188,7 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="dsp/phase2Features/">
+                        <a rel="prev" href="challenges/schedulingArchitectureComponentSurvey/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -236,13 +251,23 @@
 </ol>
 <p>Some of these objectives will build on the previous phase front-end and back-end and others will be new</p>
 <h3 id="drone-request-scheduling">Drone Request Scheduling</h3>
-<p>A drone request is a set of instructions that a consumer provides to a drone service provider and drone pilot.  The request may include and area on a map and explicit instruction of what the pilot should photograph.  An example <a href="./TODO">(request example 1)</a> might include a request for a drone to take ariel images of a wedding.  This example has a tightly constrained start and end time.  This request becomes a mission(TODO definition) which has 1 flight.   </p>
+<p>A drone request is a set of instructions that a consumer provides to a drone service provider and drone pilot.  The request may include and area on a map and explicit instruction of what the pilot should photograph.  An example <a href="./TODO">(ER1)</a> might include a <a href="#request">request</a> for a drone to take ariel images of a wedding.  This example has a tightly constrained start and end time.  This request becomes a <a href="#mission">mission</a> which has 1 flight.  Another example <a href="./TODO">(ER2)</a> might be a request for all the cell towers in Cook county to be inspected and photographed by the drone.   All the mission for this request must be completed by the by May 25 and should only be carried out on sunny days that have moderate to low wind (&lt; 25 knots).  This request specifically  states that the images must be at least 12mb and they should also include infrared images.  The act of scheduling would include a which assignments each drone and pilot should execute on a given day.  It would include the assigned pilot, drone and predicted start times, end times for each request/mission which would be a function of:</p>
+<ol>
+<li>The relative location of the request to the drones base.</li>
+<li>The ability of a drone and a pilot (skills) which may include equipment like infrared camera as well as the pilots experience of a specific task like inspecting cell towers.  </li>
+<li>The predicted weather for that operational area for that given day.</li>
+<li>The cost of operation for a particular drone and pilot</li>
+<li>The time/cost to travel between assignments</li>
+</ol>
+<p>This is but a small sample set of constraints that may come into play with request scheduling.  A primary goal of this objective is to build a robust extensible platform that would allow us to add new parameters and constraints to the request scheduling.  See the first challenge <a href="challenges/schedulingArchitectureComponentSurvey/">Scheduling Architecture Component Survey</a> to see the first challenge where we will explore the components to built this scheduling tool.</p>
 <h3 id="fleet-management">Fleet Management</h3>
 <h3 id="data-flight-log-retrieval-parsing-and-storage">Data (flight log) retrieval, parsing and storage</h3>
 <h2 id="previous-phase-output-summary-and-features"><a href="dsp/phase2Features/">Previous Phase output summary and features</a></h2>
 <h2 id="definitions">Definitions</h2>
 <h3 id="request">request</h3>
+<p>An artifact created by a consumer (customer) for the purpose of exchanging drone services which maybe in the form of imagery or delivery.  A request may have one or more missions.</p>
 <h3 id="mission">mission</h3>
+<p>The result of a request after a pilot or operator has plotted a course to be flown and have assigned a drone and a pilot.   A mission should only have one request but may have one or more flights.</p>
 <h3 id="flight">flight</h3></div>
         
     </div>
@@ -296,5 +321,5 @@
 
 <!--
 MkDocs version : 0.16.1
-Build Date UTC : 2017-02-17 17:58:16
+Build Date UTC : 2017-02-17 21:38:30
 -->

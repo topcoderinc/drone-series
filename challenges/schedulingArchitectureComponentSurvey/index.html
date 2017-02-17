@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
-    <title>Fixing Bugs from github - drone-series</title>
+    <title>challenge 1 - drone-series</title>
 
     <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -68,7 +68,7 @@
                 <ul class="nav navbar-nav">
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Phase 2B <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
@@ -79,8 +79,8 @@
 
                         
                             
-<li >
-    <a href="../../challenges/schedulingArchitectureComponentSurvey/">challenge 1</a>
+<li class="active">
+    <a href="./">challenge 1</a>
 </li>
 
                         
@@ -116,13 +116,13 @@
                 
                 
                 
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Topcoder Docs <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
 <li >
-    <a href="../copilotsResponsiblites/">Copilot Responsibilities</a>
+    <a href="../../topcoder/copilotsResponsiblites/">Copilot Responsibilities</a>
 </li>
 
                         
@@ -132,14 +132,14 @@
     <ul class="dropdown-menu">
         
             
-<li class="active">
-    <a href="./">Fixing Bugs from github</a>
+<li >
+    <a href="../../topcoder/fixingBugs/">Fixing Bugs from github</a>
 </li>
 
         
             
 <li >
-    <a href="../RagnarGit/">Ragnar: Git Process</a>
+    <a href="../../topcoder/RagnarGit/">Ragnar: Git Process</a>
 </li>
 
         
@@ -154,7 +154,7 @@
         
             
 <li >
-    <a href="../tcProjWrapper/">This Project introduction</a>
+    <a href="../../topcoder/tcProjWrapper/">This Project introduction</a>
 </li>
 
         
@@ -183,12 +183,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../copilotsResponsiblites/">
+                        <a rel="next" href="../..">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../RagnarGit/">
+                        <a rel="prev" href="../../dsp/phase2Features/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -213,60 +213,23 @@
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="first-level active"><a href="#rules-for-fixing-bugs-issues">Rules for Fixing Bugs (Issues)</a></li>
-        
-    
-        <li class="first-level "><a href="#process-for-resolving-bugs-issues">Process for Resolving Bugs (Issues)</a></li>
-        
-    
-        <li class="first-level "><a href="#tips">Tips</a></li>
-        
-    
-        <li class="first-level "><a href="#point-system">Point System</a></li>
+        <li class="first-level active"><a href="#introduction-to-drone-request-scheduling">Introduction to Drone Request Scheduling</a></li>
         
     
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<pre><code>Current Development Branch:  dev
-mtwomey edited this page on Dec 24, 2014 · 12 revisions
-</code></pre>
-<h2 id="rules-for-fixing-bugs-issues">Rules for Fixing Bugs (Issues)</h2>
-<p>IE11 is the primary browser used for the application. Please make sure to test all fixes against this browser.</p>
+<h1 id="introduction-to-drone-request-scheduling">Introduction to Drone Request Scheduling</h1>
+<p>A drone request is a set of instructions that a consumer provides to a drone service provider and drone pilot.  The request may include and area on a map and explicit instruction of what the pilot should photograph.  An example <a href="../TODO">(ER1)</a> might include a <a href="#request">request</a> for a drone to take ariel images of a wedding.  This example has a tightly constrained start and end time.  This request becomes a <a href="#mission">mission</a> which has 1 flight.  Another example <a href="../TODO">(ER2)</a> might be a request for all the cell towers in Cook county to be inspected and photographed by the drone.   All the mission for this request must be completed by the by May 25 and should only be carried out on sunny days that have moderate to low wind (&lt; 25 knots).  This request specifically  states that the images must be at least 12mb and they should also include infrared images.  The act of scheduling would include a which assignments each drone and pilot should execute on a given day.  It would include the assigned pilot, drone and predicted start times, end times for each request/mission which would be a function of:</p>
 <ol>
-<li>All eligible tasks / issues will be labeled “Up For Grabs”  You can assign any unassigned issues with this label to yourself (first come first serve)</li>
-<li>You can only assign yourself ONE issue at a time. We will monitor this and take away tasks if you do not comply</li>
-<li>If you cannot complete the task within 24 hours, add a comment to it as to why, or it will go back to unassigned</li>
-<li>Each task / issue will have points allocated to it which will translate to prizes</li>
+<li>The relative location of the request to the drones base.</li>
+<li>The ability of a drone and a pilot (skills) which may include equipment like infrared camera as well as the pilots experience of a specific task like inspecting cell towers.  </li>
+<li>The predicted weather for that operational area for that given day.</li>
+<li>The cost of operation for a particular drone and pilot</li>
+<li>The time/cost to travel between assignments</li>
 </ol>
-<h2 id="process-for-resolving-bugs-issues">Process for Resolving Bugs (Issues)</h2>
-<ol>
-<li>Remove the "Up For Grabs" label from the Issue and assign it to yourself</li>
-<li>Create a branch off the Current Development Branch (see the top of this page)</li>
-<li><em>git checkout -b [YOUR-USERNAME]-issue-[ISSUE#] [CURRENT DEVELOPMENT BRANCH]</em></li>
-<li>for example <em>git checkout -b mtwomey-issue-22 dev</em></li>
-<li>Please make <strong>sure</strong> you are branching off the correct development branch and not master!</li>
-<li>Do your work on this branch</li>
-<li>Do frequent pulls of the Current Development Branch if you're working the issue for more than a few hours</li>
-<li><em>git pull --rebase origin [CURRENT DEVELOPMENT BRANCH]</em></li>
-<li>Once you finish the task</li>
-<li>Commit your changes</li>
-<li>Do a final <em>git pull --rebase origin [CURRENT DEVELOPMENT BRANCH]</em> to make sure nothing has changed that affects your fixes</li>
-<li>Push your branch to GitHub</li>
-<li><em>git push origin [BRANCH NAME]</em></li>
-<li>Add the "Ready for Review" label to the Issue</li>
-<li>Create a pull request for your branch to the Current Development Branch</li>
-<li>Start your next issue!</li>
-</ol>
-<h2 id="tips">Tips</h2>
-<ul>
-<li>If you have questions, post a comment on the github issue</li>
-<li>If you have questions on this process contact mtwomey@appirio.com</li>
-</ul>
-<h2 id="point-system">Point System</h2>
-<p>1 point = $25 and will be paid weekly</p>
-<p>The tasks are geared to be small in scope and completed quickly.  Some may take longer than others but in general should be less than a day.</p></div>
+<p>This is but a small sample set of constraints that may come into play with request scheduling.  A primary goal of this objective is to build a robust extensible platform that would allow us to add new parameters and constraints to the request scheduling.  See the first challenge <a href="challenges/schedulingArchitectureComponentSurvey.md">Scheduling Architecture Component Survey</a> to see the first challenge where we will explore the components to built this scheduling tool.</p></div>
         
     </div>
 
