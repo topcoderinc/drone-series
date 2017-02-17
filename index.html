@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <link rel="shortcut icon" href="./img/favicon.ico">
+
+    <title>drone-series</title>
+
+    <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="./css/base.css" rel="stylesheet">
+    <link href="./css/cinder.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/highlight.css">
+
+
+    <link href="./extra.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+</head>
+
+<body class="homepage" >
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- <img src="https://storage.googleapis.com/instapage-user-media/97c829ee/1997047-0-high-topcoder-horizo.png" /> -->
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="."> <img src="https://storage.googleapis.com/instapage-user-media/97c829ee/1997047-0-high-topcoder-horizo.png"  height="22px"/> drone-series </a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li class="active">
+                        <a href=".">Phase 2B</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="dsp/frontEnd/">Front End</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="dsp/backEnd/">Back End</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Topcoder Docs <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="topcoder/copilotsResponsiblites/">Copilot Responsibilities</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">code</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="topcoder/fixingBugs/">Fixing Bugs from github</a>
+</li>
+
+        
+            
+<li >
+    <a href="topcoder/RagnarGit/">Ragnar: Git Process</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">tcProjWrapper</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="topcoder/tcProjWrapper/">This Project introduction</a>
+</li>
+
+        
+            
+<li >
+    <a href="mkDocsIndex/">mkdocs</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li class="disabled">
+                        <a rel="next" >
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="dsp/frontEnd/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a href="https://github.com/topcoderinc/drone-series">
+                            
+                                <i class="fa fa-github"></i>
+                            
+                            GitHub
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="first-level active"><a href="#phase-2b">Phase 2B</a></li>
+        
+            <li class="second-level"><a href="#introduction-to-phase-2b">Introduction to Phase 2B</a></li>
+            
+                <li class="third-level"><a href="#drone-request-scheduling">Drone request Scheduling</a></li>
+            
+                <li class="third-level"><a href="#fleet-management">Fleet Management</a></li>
+            
+                <li class="third-level"><a href="#data-flight-log-retrieval-parsing-and-storage">Data (flight log) retrieval, parsing and storage</a></li>
+            
+        
+            <li class="second-level"><a href="#previous-phase-output-summary-phase-2">Previous Phase output summary (Phase 2)</a></li>
+            
+                <li class="third-level"><a href="#drone-companion-pc-agent">Drone Companion PC "Agent"</a></li>
+            
+                <li class="third-level"><a href="#external-drone-tracker">External Drone Tracker</a></li>
+            
+                <li class="third-level"><a href="#dsp-features">DSP features</a></li>
+            
+        
+    
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="phase-2b">Phase 2B</h1>
+<h2 id="introduction-to-phase-2b">Introduction to Phase 2B</h2>
+<p>The next phase Drone Series, which we are calling 2b,  will begin at the end of February 2017 and run through May.   This Phase has three primary objectives.</p>
+<ol>
+<li>Drone request Scheduling</li>
+<li>Fleet Management</li>
+<li>Data (flight log) retrieval, parsing and storage</li>
+</ol>
+<p>Some of these objectives will build on the previous phase front-end and back-end and others will be new</p>
+<h3 id="drone-request-scheduling">Drone request Scheduling</h3>
+<h3 id="fleet-management">Fleet Management</h3>
+<h3 id="data-flight-log-retrieval-parsing-and-storage">Data (flight log) retrieval, parsing and storage</h3>
+<h2 id="previous-phase-output-summary-phase-2">Previous Phase output summary (Phase 2)</h2>
+<h3 id="drone-companion-pc-agent">Drone Companion PC "Agent"</h3>
+<p>Drone Series Phase 2 ran from late October 2016 through January 2017.  In addition to build a Drone Series Platform  (DSP) which allowed for consumer and providers to exchange services in a 2 sided market place we also built and REST based agent, written in NodeJS, that listened on the companion pc (raspberry pi) which was connected to the the pixhawk flight controller via serial.   The "agent" proxied instructions and locations between the drone itself and the dsp.</p>
+<h3 id="external-drone-tracker">External Drone Tracker</h3>
+<p>The above described "agent" works great for the pixhawk,  because we have serial access to the flight controller, but we also wanted to be able to strap on a device to a ready to fly drone. To acheive this we create <a href="https://github.com/kbowerma/droneTracker">droneTracker</a> which provides the same GPS smart updates to the DSP by using and particle photon](https://store.particle.io/) + <a href="https://www.adafruit.com/product/746">GPS</a> + <a href="https://www.adafruit.com/products/1120">magnometer / accelerometer</a>  + <a href="https://www.amazon.com/gp/product/B019UVHWMS">Drone Tail lights -- neopixel leds and buzzer --  </a>.  DroneTracker updates the DSP location and in the response it can react to other drones that are too close or it can react to being in a No-Fly-Zone.  The image below shows the neopixel leds running a police siren sequence when the drone has violated a no fly zone.</p>
+<table border="0">
+  <tr><td>
+      <figure>
+      <img width=60%  src="https://cloud.githubusercontent.com/assets/1180747/23071626/9ef6242e-f4f4-11e6-9bb4-9b453de7befc.png">
+      <figcaption>3DR solo showing tail lights of droneTracker</figcaption>
+      </figure>
+    </td>
+    <td>
+      <figure>
+      <img src="https://cloud.githubusercontent.com/assets/1180747/23071476/0f63c5be-f4f4-11e6-9b2b-ad20caca488d.gif" />
+      <figcaption>Fig1. - A view of the pulpit rock in Norway.</figcaption>
+      </figure>
+  </td> </tr>
+</table>
+
+<h3 id="dsp-features">DSP features</h3>
+<ul>
+<li>Drone provider, Drone Pilot, Consumer, and Admin Profiles</li>
+<li>Ability for consumer to create a drone service request for imagery</li>
+</ul></div>
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        <hr>
+        <p>
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+    </footer>
+
+    <script src="./js/jquery-1.10.2.min.js"></script>
+    <script src="./js/bootstrap-3.0.3.min.js"></script>
+    <script src="./js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '.';
+    </script>
+    <script data-main="./mkdocs/js/search.js" src="./mkdocs/js/require.js"></script>
+    <script src="./js/base.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>
+
+<!--
+MkDocs version : 0.16.1
+Build Date UTC : 2017-02-17 16:53:25
+-->
