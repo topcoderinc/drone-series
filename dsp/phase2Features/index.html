@@ -213,7 +213,7 @@
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="first-level active"><a href="#drone-companion-pc-agent">Drone Companion PC "Agent"</a></li>
+        <li class="first-level active"><a href="#drone-companion-pc-the-agent">Drone Companion PC "the Agent"</a></li>
         
     
         <li class="first-level "><a href="#external-drone-tracker">External Drone Tracker</a></li>
@@ -226,8 +226,9 @@
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="drone-companion-pc-agent">Drone Companion PC "Agent"</h1>
-<p>Drone Series Phase 2 ran from late October 2016 through January 2017.  In addition to build a Drone Series Platform  (DSP) which allowed for consumer and providers to exchange services in a 2 sided market place we also built and REST based agent, written in NodeJS, that listened on the companion pc (raspberry pi) which was connected to the the pixhawk flight controller via serial.   The "agent" proxied instructions and locations between the drone itself and the dsp.</p>
+<h1 id="drone-companion-pc-the-agent">Drone Companion PC "the Agent"</h1>
+<p>Drone Series Phase 2 ran from late October 2016 through January 2017.  In addition to build a Drone Series Platform  (DSP) which allowed for consumer and providers to exchange services in a 2 sided market place we also built and REST based agent, written in NodeJS, that listened on the companion pc (raspberry pi) which was connected to the the pixhawk flight controller via serial.   The "agent" proxied instructions and locations between the drone itself and the dsp.
+<img width=100% src="https://cnt-01.content-na.drive.amazonaws.com/cdproxy/templink/51yJPBLBN9QSF_yz5W9CLZQPepmoykdF3Wcg_jZOtP8eJxFPc?viewBox=4034%2C2640" /></p>
 <h1 id="external-drone-tracker">External Drone Tracker</h1>
 <p>The above described "agent" works great for the pixhawk,  because we have serial access to the flight controller, but we also wanted to be able to strap on a device to a ready to fly drone. To acheive this we create <a href="https://github.com/kbowerma/droneTracker">droneTracker</a> which provides the same GPS smart updates to the DSP by using and particle photon](https://store.particle.io/) + <a href="https://www.adafruit.com/product/746">GPS</a> + <a href="https://www.adafruit.com/products/1120">magnometer / accelerometer</a>  + <a href="https://www.amazon.com/gp/product/B019UVHWMS">Drone Tail lights -- neopixel leds and buzzer --  </a>.  DroneTracker updates the DSP location and in the response it can react to other drones that are too close or it can react to being in a No-Fly-Zone.  The image below shows the neopixel leds running a police siren sequence when the drone has violated a no fly zone.</p>
 <table border="0">

@@ -215,21 +215,30 @@
     
         <li class="first-level active"><a href="#introduction-to-drone-request-scheduling">Introduction to Drone Request Scheduling</a></li>
         
+            <li class="second-level"><a href="#one-proposed-approach">One proposed approach</a></li>
+            
+        
     
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
 <h1 id="introduction-to-drone-request-scheduling">Introduction to Drone Request Scheduling</h1>
-<p>A drone request is a set of instructions that a consumer provides to a drone service provider and drone pilot.  The request may include and area on a map and explicit instruction of what the pilot should photograph.  An example <a href="../TODO">(ER1)</a> might include a <a href="#request">request</a> for a drone to take ariel images of a wedding.  This example has a tightly constrained start and end time.  This request becomes a <a href="#mission">mission</a> which has 1 flight.  Another example <a href="../TODO">(ER2)</a> might be a request for all the cell towers in Cook county to be inspected and photographed by the drone.   All the mission for this request must be completed by the by May 25 and should only be carried out on sunny days that have moderate to low wind (&lt; 25 knots).  This request specifically  states that the images must be at least 12mb and they should also include infrared images.  The act of scheduling would include a which assignments each drone and pilot should execute on a given day.  It would include the assigned pilot, drone and predicted start times, end times for each request/mission which would be a function of:</p>
+<p>A drone request is a set of instructions that a consumer provides to a drone service provider and drone pilot.  The request may include an area on a map and explicit instruction of what the pilot should photograph.  An example <a href="../TODO">(ER1)</a> might include a <a href="#request">request</a> for a drone to take aerial images of the guests at a wedding.  This example has a tightly constrained by the start and end time.  A request becomes a <a href="#mission">mission</a> which has 1 flight.   Another example <a href="../TODO">(ER2)</a> might be a request for all the cell towers in Cook county to be inspected and photographed by the drone.    All the mission must be flown for this request by the by May 25, and should only be carried out on sunny days that have moderate to low wind (&lt; 25 knots).  This request specifically  states that the images must be at least 12mb and should capture each cell and Microwave dish in full frame.  They should also include infrared images of all the equipment as well.  </p>
+<p>The act of scheduling would assign both a drone and a pilot to a mission such that both the drone and the pilot's output would be maximized. A <strong>schedule</strong> would include the assigned pilot, drone and predicted start times, end times for each request/mission which would be a function of:</p>
 <ol>
-<li>The relative location of the request to the drones base.</li>
-<li>The ability of a drone and a pilot (skills) which may include equipment like infrared camera as well as the pilots experience of a specific task like inspecting cell towers.  </li>
-<li>The predicted weather for that operational area for that given day.</li>
+<li>The relative location of the request to the drones base</li>
+<li>The ability of a drone and a pilot (skills) which may include equipment like infrared camera as well as the pilots experience of a specific task like inspecting cell towers.</li>
+<li>The predicted weather for that operational area for that given day</li>
 <li>The cost of operation for a particular drone and pilot</li>
 <li>The time/cost to travel between assignments</li>
+<li>Plus future considerations</li>
 </ol>
-<p>This is but a small sample set of constraints that may come into play with request scheduling.  A primary goal of this objective is to build a robust extensible platform that would allow us to add new parameters and constraints to the request scheduling.  See the first challenge <a href="challenges/schedulingArchitectureComponentSurvey.md">Scheduling Architecture Component Survey</a> to see the first challenge where we will explore the components to built this scheduling tool.</p></div>
+<p>This is but a small sample set of constraints that may come into play with request scheduling.  A primary goal of this objective is to build a robust extensible platform that would allow us to add new parameters and constraints to the request scheduling.  See the first challenge <a href="challenges/schedulingArchitectureComponentSurvey.md">Scheduling Architecture Component Survey</a> to see the first challenge where we will explore the components to built this scheduling tool.</p>
+<hr />
+<h2 id="one-proposed-approach">One proposed approach</h2>
+<p>Topcoder's mtwomey and kbowerma have drafted an approach to scheduling described by the image below and followed by a description of each of the scheduling components and test harness.</p>
+<p><img alt="" src="../../img/schedulingApproach.svg" /></p></div>
         
     </div>
 
