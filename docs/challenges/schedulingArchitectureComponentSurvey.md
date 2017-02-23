@@ -75,7 +75,7 @@ The Schedule is simply the output of the master solver.   At a minimum it should
 Once the schedule has been created the simulator is a developer utility that is used to test schedule.   Where as the scheduler is based on probability of an occurrence, (like the probability of it raining at a certain time ), the simulator is based on certainty.   Like the model generator, the simulator will contain actual conditions like it was raining between 12:43 and 3:15.  The output of this code will produce statistics like how many missions were delayed, and the total number of delayed minutes,  and the cost related to the equipment and the pilot.  It seems very likely that the generator and the simulator maybe created from the same code base and are distinguished from a command line switch.
 
 # This Challenge
-The description above is one approach (option1) we have come up with.   Now we would like to vet it and hear from you.   Please submit a document that discusses some of the following:
+The description above is one approach (option1) we have come up with.   Now we would like to vet it and hear from you.   Please submit a document that discusses some or all of the following or anything else that you think is pertinent.
 
 1. Is the option1 sound?   Can you make any suggestions or modifications that will make it more robust.  
 2. Can you identify any tools libraries or frameworks (examples like pygame or json-rules-engine ) that we can leverage so we don't have to write this all from scratch.
